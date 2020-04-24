@@ -1,83 +1,48 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
-
-
 
 public class PlayerController : MonoBehaviour
 {
-    const int STATE_IDLE = 0;
-    const int STATE_WALK = 1;
-
-    public float moveSpeed;
-    public float motionX;
-    public float motionY;
-    public int facing = 1; // 1 = right, -1 = left
+    public float speed;
     public float jumpSpeed;
+    private float move;
     private bool isJumping;
-
-    public Rigidbody2D rb;
-    public SpriteRenderer sr;
-    public Animator anim;
+    Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
-        sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
     void FixedUpdate()
     {
-        motionX = Input.GetAxisRaw("Horizontal");
-        motionY = Input.GetAxisRaw("Vertical");
-        if (motionX > 0.5f || motionX < -0.5f)
-        {
-            setFacing(motionX);
-            changeState(STATE_WALK);
-            transform.Translate(new Vector2(motionX * moveSpeed * Time.deltaTime, 0f));
-        }
+        float move = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
-        if (motionY > 0.5f || motionY < -0.5f)
+        if(move < 0)
         {
-            changeState(STATE_WALK);
-            transform.Translate(new Vector2(0f, motionY * moveSpeed * Time.deltaTime));
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }else if (move > 0)
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
-
-        if (motionY < 0.5f && motionY > -0.5f && motionX < 0.5f && motionX >  -0.5f)
+        if (Input.GetButtonDown("Jump") && !isJumping)
         {
-            changeState(STATE_IDLE);
+            rb.AddForce(new Vector2(rb.velocity.x, jumpSpeed));
+            isJumping = true;
         }
     }
-
-    void setFacing(float direction)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (facing*direction < 0)
+        if (other.gameObject.CompareTag("Ground"))
         {
-            if (direction > 0.5f)
-            {
-                sr.flipX = false;
-                facing = 1;
-            }
-            if (direction < 0.5f)
-            {
-                sr.flipX = true;
-                facing = -1;
-            }
-        }
-    }
-
-    void changeState(int state)
-    {
-        if (anim.GetInteger("state") != state)
-        {
-            anim.SetInteger("state", state);
+            isJumping = false;
         }
     }
 }

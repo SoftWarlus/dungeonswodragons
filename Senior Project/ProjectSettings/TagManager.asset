@@ -3,11 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Door
-  - obstacle
-  - Enemy
-  - projectile
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -17,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - Player
-  - FloorHazard
+  - 
+  - 
   - 
   - 
   - 
@@ -45,15 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: floor
-    uniqueID: 338753045
+  - name: Floor
+    uniqueID: 4287473381
     locked: 0
-  - name: item
-    uniqueID: 3217355821
+  - name: Items
+    uniqueID: 2828664069
     locked: 0
-  - name: obstacle
-    uniqueID: 1411960543
-    locked: 0
-  - name: player
-    uniqueID: 1301186667
+  - name: Character
+    uniqueID: 779931813
     locked: 0
