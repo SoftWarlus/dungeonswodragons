@@ -9,10 +9,13 @@ public class EnemyProjectile : MonoBehaviour
     //public GameObject target;
     public float projectileSpeed;
 
+    private float timeBtwShots;
+    public float startTimeBtwShots;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        timeBtwShots = startTimeBtwShots;
     }
 
     // Update is called once per frame
@@ -21,12 +24,17 @@ public class EnemyProjectile : MonoBehaviour
         Vector3 difference = player.transform.position - transform.position;
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 
-        if (gameObject.GetComponent<zombie_follow>().chaseRange >= difference.magnitude)
+        if (timeBtwShots <= 0 && gameObject.GetComponent<zombie_follow>().chaseRange >= difference.magnitude)
         {
             float distance = difference.magnitude;
             Vector2 direction = difference / distance;
             direction.Normalize();
             throwProjectile(direction, rotationZ);
+            timeBtwShots = startTimeBtwShots;
+        }
+        else
+        {
+            timeBtwShots -= Time.deltaTime;
         }
     }
 
