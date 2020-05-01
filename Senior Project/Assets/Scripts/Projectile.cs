@@ -9,10 +9,13 @@ public class Projectile : MonoBehaviour
     public GameObject p;
     public float projectileSpeed = 20.0f;
     private Vector3 target;
+    private float timeBtwShots;
+    public float startTimeBtwShots;
 
     // Start is called before the first frame update
     void Start()
     {
+        timeBtwShots = startTimeBtwShots;
         Cursor.visible = false;
     }
 
@@ -25,12 +28,18 @@ public class Projectile : MonoBehaviour
         Vector3 difference = target - transform.position;
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButton(0) && timeBtwShots <= 0)
         {
             float distance = difference.magnitude;
             Vector2 direction = difference / distance;
             direction.Normalize();
             throwProjectile(direction, rotationZ);
+            timeBtwShots = startTimeBtwShots;
+            
+        }
+        else
+        {
+            timeBtwShots -= Time.deltaTime;
         }
     }
 

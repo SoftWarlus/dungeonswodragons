@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4729230712322568903}
   - component: {fileID: 4729230712322568896}
   - component: {fileID: -4892079384302424517}
+  - component: {fileID: 2456518891118191648}
   m_Layer: 0
   m_Name: big_zombie_idle_anim_f1
   m_TagString: Enemy
@@ -96,11 +97,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4941c305038a714c909ab8fa26a4b60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolPoints:
-  - {fileID: 0}
   speed: 3
   target: {fileID: 8019760010413634667, guid: 972ad1626a77d9047a3cd86b3f6c1ca1, type: 3}
   chaseRange: 5
+  startTimeBtwShots: 0
+  Projectile: {fileID: 0}
 --- !u!60 &4729230712322568896
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -147,4 +148,19 @@ MonoBehaviour:
   player: {fileID: 8019760010830219678, guid: 972ad1626a77d9047a3cd86b3f6c1ca1, type: 3}
   projectile: {fileID: 957718784177572230, guid: 76daf90c718b80847bdc6fbf3526c620,
     type: 3}
-  projectileSpeed: 20
+  projectileSpeed: 5
+  startTimeBtwShots: 1
+--- !u!114 &2456518891118191648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4729230712322568900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86717296590c8b6408405d0b6f68b9fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 50
+  currentHP: 50

@@ -188,8 +188,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 100
   currentHP: 100
-  maxMP: 60
-  currentMP: 60
+  maxMP: 100
+  currentMP: 100
   sKeys: 0
 --- !u!114 &-6189963698921150825
 MonoBehaviour:
@@ -208,7 +208,8 @@ MonoBehaviour:
   projectile: {fileID: 8700229413184638296, guid: 928e87ed437bbbe4dbb4f04ed93efd33,
     type: 3}
   p: {fileID: 0}
-  projectileSpeed: 20
+  projectileSpeed: 10
+  startTimeBtwShots: 0.25
 --- !u!114 &-226428444705525089
 MonoBehaviour:
   m_ObjectHideFlags: 0

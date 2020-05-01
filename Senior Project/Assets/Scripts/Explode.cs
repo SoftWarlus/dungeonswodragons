@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SelfDestruct : MonoBehaviour
+public class Explode : MonoBehaviour
 {
     public string target;
     
@@ -20,14 +20,9 @@ public class SelfDestruct : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "wall" || other.gameObject.tag == "obstacle")
+        if (other.gameObject.name == "wall" || other.gameObject.tag == "obstacle" || other.gameObject.GetComponent<Harm>().immune != gameObject.GetComponent<Harm>().immune)
         {
             Destroy(gameObject);
-        }
-        if (other.gameObject.tag == target)
-        {
-            Destroy(gameObject);
-            Destroy(other.gameObject);
         }
     }
 }

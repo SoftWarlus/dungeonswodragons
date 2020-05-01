@@ -26,11 +26,6 @@ public class ResourceManager : MonoBehaviour
         }
     }
 
-    public void DamagePlayer(int damage)
-    {
-        currentHP -= damage;
-    }
-
     public void Reset()
     {
         currentHP = maxHP;

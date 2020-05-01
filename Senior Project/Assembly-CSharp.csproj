@@ -65,8 +65,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
+    <Compile Include="Assets\Scripts\EnemyHP.cs" />
     <Compile Include="Assets\Scripts\EnemyProjectile.cs" />
-    <Compile Include="Assets\Scripts\InflictDamage.cs" />
+    <Compile Include="Assets\Scripts\Explode.cs" />
+    <Compile Include="Assets\Scripts\Harm.cs" />
     <Compile Include="Assets\Scripts\InventoryManager.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\ItemMasterLIst.cs" />
@@ -75,7 +77,6 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\ResourceManager.cs" />
-    <Compile Include="Assets\Scripts\SelfDestruct.cs" />
     <Compile Include="Assets\Scripts\UI.cs" />
     <Compile Include="Assets\Scripts\zombie_follow.cs" />
     <None Include="Assets\Scripts\items.txt" />
