@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 8019760010830219672}
   - component: {fileID: 8019760010830219679}
   - component: {fileID: 8019760010413634661}
+  - component: {fileID: -6189963698921150825}
+  - component: {fileID: -226428444705525089}
   m_Layer: 0
   m_Name: knight
   m_TagString: Player
@@ -189,3 +191,34 @@ MonoBehaviour:
   maxMP: 60
   currentMP: 60
   sKeys: 0
+--- !u!114 &-6189963698921150825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8019760010830219678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a8e317c51892fc448f9f0b4f0d75863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crosshairs: {fileID: 4804876545470414214, guid: 6b4a8e221fb74fd47852a6297a8bdc33,
+    type: 3}
+  projectile: {fileID: 8700229413184638296, guid: 928e87ed437bbbe4dbb4f04ed93efd33,
+    type: 3}
+  p: {fileID: 0}
+  projectileSpeed: 20
+--- !u!114 &-226428444705525089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8019760010830219678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad0f9b08b7975f44b35dd659d7be428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemList: {fileID: 4900000, guid: 2c707101793d6e649a47443e30b20c6f, type: 3}

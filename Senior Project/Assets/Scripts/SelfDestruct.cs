@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SelfDestruct : MonoBehaviour
 {
+    public string target;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,7 @@ public class SelfDestruct : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == target)
         {
             Destroy(gameObject);
             Destroy(other.gameObject);

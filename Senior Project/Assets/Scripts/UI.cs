@@ -29,5 +29,15 @@ public class UI : MonoBehaviour
         MPBar.value = stats.currentMP;
         MPText.text = "MP: " + stats.currentMP + "/" + stats.maxMP;
         sKeyQ.text = "" + stats.sKeys;
+
+        /*if (Input.GetKeyDown("E"))
+        {
+            openInventory();
+        }*/
+    }
+
+    void openInventory()
+    {
+        Time.timeScale = 0;
     }
 }

@@ -20,7 +20,7 @@ public class ResourceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentHP < 0)
+        if (currentHP <= 0)
         {
             gameObject.SetActive(false);
         }
@@ -40,11 +40,6 @@ public class ResourceManager : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.name == "door1" && sKeys >= 1)
-        {
-            other.gameObject.SetActive(false);
-            sKeys--;
-        }
         if (other.gameObject.name == "sKey1")
         {
             other.gameObject.SetActive(false);

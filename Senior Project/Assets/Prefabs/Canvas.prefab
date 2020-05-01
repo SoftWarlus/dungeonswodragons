@@ -1191,7 +1191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fba0dc47f785754089b4405e7c83774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 0}
+  stats: {fileID: 8019760010413634661, guid: 972ad1626a77d9047a3cd86b3f6c1ca1, type: 3}
   HPBar: {fileID: 842814783096812747}
   HPText: {fileID: 842814782617540163}
   MPBar: {fileID: 842814781974332522}

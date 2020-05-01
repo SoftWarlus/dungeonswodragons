@@ -1,0 +1,4 @@
+0, 1, 0, "Fireball Orb", "Cast FIREBALL! Cost: 10MP", true, true
+1, 1, 0, "Force Orb", "Cast FORCE SHIELD! Cost: 25MP", true, true
+2, 1, 0, "Lightning Staff", "Cast LIGHTNING! Cost: 40MP/s", true, true
+10, 10, 5, "Minor Health Potion", "Restore 50HP on use", false, false
