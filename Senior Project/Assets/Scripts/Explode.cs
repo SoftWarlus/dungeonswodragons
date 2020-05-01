@@ -17,10 +17,13 @@ public class Explode : MonoBehaviour
     {
         
     }
-
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "wall" || other.gameObject.tag == "obstacle" || other.gameObject.GetComponent<Harm>().immune != gameObject.GetComponent<Harm>().immune)
+        if (other.gameObject.name == "wall" || other.gameObject.tag == "obstacle")
+        {
+            Destroy(gameObject);
+        }
+        else if (gameObject.GetComponent<Harm>().immune != other.gameObject.tag && gameObject.GetComponent<Harm>().immune != other.gameObject.name)
         {
             Destroy(gameObject);
         }

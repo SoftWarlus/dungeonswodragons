@@ -155,12 +155,12 @@ PrefabInstance:
     - target: {fileID: 4729230712322568897, guid: bd3eb820e5aeb494683f5aea84eaac9d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.51978
+      value: -11.5
       objectReference: {fileID: 0}
     - target: {fileID: 4729230712322568897, guid: bd3eb820e5aeb494683f5aea84eaac9d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.642364
+      value: 4.46
       objectReference: {fileID: 0}
     - target: {fileID: 4729230712322568897, guid: bd3eb820e5aeb494683f5aea84eaac9d,
         type: 3}
@@ -210,13 +210,25 @@ PrefabInstance:
     - target: {fileID: 4729230712322568900, guid: bd3eb820e5aeb494683f5aea84eaac9d,
         type: 3}
       propertyPath: m_Name
-      value: big_zombie_idle_anim_f1 (1)
+      value: hooded boi
       objectReference: {fileID: 0}
+    - target: {fileID: 4729230712322568902, guid: bd3eb820e5aeb494683f5aea84eaac9d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4091284238738374682, guid: f7f4db656293b5342b64d9dcfccbe149,
+        type: 3}
     - target: {fileID: 4729230712322568903, guid: bd3eb820e5aeb494683f5aea84eaac9d,
         type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 5702693}
+    - target: {fileID: 4729230712322568903, guid: bd3eb820e5aeb494683f5aea84eaac9d,
+        type: 3}
+      propertyPath: Projectile
+      value: 
+      objectReference: {fileID: 957718784177572230, guid: 76daf90c718b80847bdc6fbf3526c620,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd3eb820e5aeb494683f5aea84eaac9d, type: 3}
 --- !u!1001 &249417284
@@ -11648,6 +11660,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: big_zombie_idle_anim_f1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4729230712322568902, guid: bd3eb820e5aeb494683f5aea84eaac9d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 594069940499517038, guid: f7f4db656293b5342b64d9dcfccbe149,
+        type: 3}
     - target: {fileID: 4729230712322568903, guid: bd3eb820e5aeb494683f5aea84eaac9d,
         type: 3}
       propertyPath: target
@@ -12154,6 +12172,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: big_zombie_idle_anim_f1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4729230712322568902, guid: bd3eb820e5aeb494683f5aea84eaac9d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4091284238738374682, guid: f7f4db656293b5342b64d9dcfccbe149,
+        type: 3}
     - target: {fileID: 4729230712322568903, guid: bd3eb820e5aeb494683f5aea84eaac9d,
         type: 3}
       propertyPath: target
@@ -12220,6 +12244,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4892079384302424517, guid: bd3eb820e5aeb494683f5aea84eaac9d,
+        type: 3}
+      propertyPath: projectileSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4729230712322568897, guid: bd3eb820e5aeb494683f5aea84eaac9d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12278,12 +12307,33 @@ PrefabInstance:
     - target: {fileID: 4729230712322568900, guid: bd3eb820e5aeb494683f5aea84eaac9d,
         type: 3}
       propertyPath: m_Name
-      value: big_zombie_idle_anim_f1
+      value: first enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4729230712322568902, guid: bd3eb820e5aeb494683f5aea84eaac9d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3034580783547917849, guid: f7f4db656293b5342b64d9dcfccbe149,
+        type: 3}
     - target: {fileID: 4729230712322568903, guid: bd3eb820e5aeb494683f5aea84eaac9d,
         type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 5702693}
+    - target: {fileID: 4729230712322568903, guid: bd3eb820e5aeb494683f5aea84eaac9d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729230712322568903, guid: bd3eb820e5aeb494683f5aea84eaac9d,
+        type: 3}
+      propertyPath: startTimeBtwShots
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729230712322568903, guid: bd3eb820e5aeb494683f5aea84eaac9d,
+        type: 3}
+      propertyPath: speed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd3eb820e5aeb494683f5aea84eaac9d, type: 3}
